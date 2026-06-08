@@ -1,2 +1,2 @@
 # Windows-12
-Windows 12 concept by Muhammad Hammad
+Simple windows-12 concept
