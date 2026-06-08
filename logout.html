@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            height: 867px;
+            width: 100%;
+            background: #000;
+            color: white;
+        }
+
+        .logging {
+            position: relative;
+            left: 510px;
+            top: 350px;
+            display: inline;
+            animation-name: logout;
+            animation-duration: 2s;
+            animation-delay: 4s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes logout {
+            from{
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+
+        .welcome {
+            position: relative;
+            left: 180px;
+            top: 330px;
+            opacity: 0;
+            display: inline;
+            animation-name: welcome;
+            animation-duration: 2s;
+            animation-delay: 6s;
+            animation-iteration-count: 1;
+            animation-fill-mode:forwards;
+        }
+
+        a {
+            position: relative;
+            left: 0px;
+            top: 360px;
+            opacity: 0;
+            display: inline;
+            animation-name: welcome;
+            animation-duration: 2s;
+            animation-delay: 6s;
+            animation-iteration-count: 1;
+            animation-fill-mode:forwards;
+        }
+
+        @keyframes welcome {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="logging">Logging out and restarting....</h2>
+    <h2 class="welcome">Welcome back, Hammad</h2>
+    <a href="index.html">Go to windows</a>
+</body>
+
+</html>

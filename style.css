@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.dark-bg {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    object-fit: cover;
+}
+
+.light-bg {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.mobile-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 9999;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .mobile-message {
+        display: flex;
+    }
+    .dark-bg, .light-bg, .taskbar, .menu {
+        display: none !important;
+    }
+}
+
+.taskbar {
+    background-color: #131313;
+    height: 65px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.taskbar .logo {
+    display: grid;
+    gap: 3px;
+    grid-template-columns: 18px 18px;
+}
+
+.taskbar .left .hover {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 310px;
+    border-radius: 5px;
+    transition: 0.3s ease background;
+}
+
+.taskbar .left .hover:hover {
+    background: rgb(31, 31, 31);
+}
+
+.taskbar .logo:hover {
+    border-radius: 6px;
+}
+
+.taskbar .logo:hover {
+    cursor: pointer;
+}
+
+.taskbar .logo .items {
+    width: 18px;
+    height: 18px;
+    background: rgb(16, 76, 133);
+}
+
+.taskbar .search input {
+    height: 35px;
+    width: 300px;
+    font-size: 1rem;
+    border-radius: 25px;
+    padding-left: 10px;
+    font-size: 1.1rem;
+    background-color: rgb(31, 31, 31);
+    border: 1px solid rgb(94, 94, 94);
+    color: white;
+    position: relative;
+    right: 80px;
+}
+
+.taskbar .search input::placeholder {
+    color: white;
+    font-size: 1rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search .logo:hover .items {
+    background: gray;
+}
+
+.taskbar .logo #item-1 {
+    border-top-left-radius: 6px;
+}
+
+.taskbar .logo #item-2 {
+    border-top-right-radius: 6px;
+}
+
+.taskbar .logo #item-3 {
+    border-bottom-left-radius: 6px;
+}
+
+.taskbar .logo #item-4 {
+    border-bottom-right-radius: 6px;
+}
+
+.taskbar .left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.taskbar .left .search {
+    margin-left: 400px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.taskbar .apps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    right: 50px;
+    border-radius: 6px;
+    transition: 0.3s ease background;
+    cursor: pointer;
+}
+.taskbar .apps:hover{
+    background: rgb(31, 31, 31);
+}
+
+.taskbar .settings {
+    display: flex;
+}
+
+.taskbar .apps .internet-explorer img {
+    width: 40px;
+    height: 40px;
+}
+
+.taskbar .apps .internet-explorer {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.taskbar .settings {
+    position: relative;
+    left: 210px;
+    align-items: center;
+    display: flex;
+}
+
+.taskbar .settings div {
+    margin: 0px 7px;
+}
+
+.taskbar .settings .date-time {
+    color: white;
+}
+
+.taskbar .settings .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 50px;
+    border-radius: 7px;
+    transition: 0.3s ease background;
+}
+
+.taskbar .settings .icons:hover {
+    background: rgb(31, 31, 31);
+}
+
+.taskbar .settings .date-time {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    padding: 5px;
+    font-size: 0.8rem;
+    transition: 0.3s ease background;
+}
+
+.taskbar .settings .date-time:hover {
+    background: rgb(31, 31, 31);
+    cursor:default;
+}
+
+.menu {
+    display: none;
+    width: 380px;
+    height: 500px;
+    background: rgb(51, 51, 51);
+    opacity: 0.7;
+    color: white;
+    border-radius: 12px;
+    opacity: 1;
+    position: absolute;
+    top: calc(100% - 580px);
+    left: -170px;
+}
+.menu .theme {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.profile img {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    top: 20px;
+    left: 32px;
+}
+
+.profile h2 {
+    margin-top: 43px;
+    margin-left: 55px;
+}
+
+.profile {
+    display: flex;
+}
+
+.menu hr {
+    position: relative;
+    top: 40px;
+    width: 310px;
+    left: 30px;
+}
+
+.buttons .dynamic {
+    display: flex;
+}
+
+.buttons .dynamic button {
+    top: 63px;
+    position: relative;
+    padding: 3px;
+    background: gray;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    position: relative;
+    left: 110px;
+}
+
+.buttons .static {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons .static a {
+    width: 120px;
+    position: relative;
+    top: 160px;
+    margin: 4px;
+    left: 130px;
+    background: #000;
+    color: white;
+    font-size: 19px;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.menu:hover {
+    cursor: initial;
+}
+
+.menu .static button:hover {
+    cursor: pointer;
+}
+
+.menu hr.down {
+    position: relative;
+    top: 100px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch user</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            width: 100%;
+            height: 867px;
+            background: #000;
+            color: white;
+        }
+        .processing{
+            position: relative;
+            left: 550px;
+            top: 350px;
+            display: inline;
+            animation-name: processing;
+            animation-duration: 2s;
+            animation-delay: 4s;
+            animation-fill-mode: forwards;
+        }
+        .done{
+            position: relative;
+            left: 300px;
+            top: 350px;
+            display: inline;
+            opacity: 0;
+            animation-name: done;
+            animation-duration: 2s;
+            animation-delay: 5s;
+            animation-fill-mode: forwards;
+        }
+        a{
+            position: relative;
+            left: 115px;
+            top: 385px;
+            opacity: 0;
+            display: inline;
+            animation-name: done;
+            animation-duration: 2s;
+            animation-delay: 5s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes processing {
+            from{
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+        }
+        @keyframes done{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 class="processing">Switching user....</h2>
+    <h2 class="done">Welcome back, Hammad</h2>
+    <a href="index.html">Go to windows</a>
+</body>
+</html>
